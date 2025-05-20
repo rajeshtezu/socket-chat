@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket Chat</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Socket Chat</h1>
+      <div id="connected-users"></div>
+
+      <form id="join-form" style="display: block">
+        <label for="username">Username:</label>
+        <input id="username" type="text" />
+        <button id="join-btn">Join</button>
+
+        <br />
+        <br />
+        <label for="remoteuser">RemoteUser:</label>
+        <input id="remoteuserInput" type="text" />
+        <button id="chat-remoteuser">Chat with</button>
+      </form>
+
+      <div id="chat-text"></div>
+
+      <form id="chat-form" style="display: none">
+        <input id="chat-input" type="text" />
+        <button id="send-btn">Send</button>
+      </form>
+    </main>
+
+    <script type="module" src="chat.js"></script>
+  </body>
+</html>
